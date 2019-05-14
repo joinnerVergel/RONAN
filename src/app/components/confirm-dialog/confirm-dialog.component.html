@@ -1,0 +1,18 @@
+<div class="modal-header">
+    <div class="name">Señor(a) {{this.auth.obj_Authentication.nombre}}</div>
+    <button type="button" class="close" aria-label="Close" (click)="cancel()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>{{description}}</p>
+    <p class="note">{{note}}</p>
+    <p>{{question}}</p>
+    
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="cancel()">Cancelar</button>
+    <button type="button" class="btn btn-outline-secondary" (click)="notAccept()">No Aceptar</button>
+    <button type="button" class="btn btn-success" (click)="confirm()">Aceptar</button>
+  </div>
+  

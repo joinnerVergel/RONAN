@@ -1,0 +1,75 @@
+form{
+    clear: both;
+    width: 480px;
+    margin: 0 auto;
+}
+
+.form-group{
+    margin: 10px;
+}
+.radiosContainer{
+    margin: 10px;
+    padding: 20px;
+    /* border: 2px inset #fff; */
+    border-radius: 5px;
+    background: rgba(255,255,255,0.7);
+    text-align: center;
+}
+
+label.tittle{
+    font-weight: bold;
+    color: #00a9e0;
+    text-align: center;
+    display: block;
+    font-family: telefonicaBold !important;
+    text-shadow: -1px 1px #fff;
+}
+
+.form-check {
+    float: left;
+    padding: 10px 20px;
+    width: 50%;
+    text-align: left;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    font-size: 0.7em;
+    height: 60px;
+}
+.text{
+    clear:both;
+    font-size: 0.7em;
+}
+.buttons{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.buttons button{
+    margin: 20px 0 0;
+    width: 95%;
+    
+}
+
+.radios{
+    overflow: hidden;
+    display: table;
+    margin: 20px auto;
+    width: 360px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 2px;
+}
+
+.text p{
+    margin: 0px;
+}
+
+.radios_{
+    padding-left: 20px;
+}
+
+
+.basicInformation .name{
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block;
+}

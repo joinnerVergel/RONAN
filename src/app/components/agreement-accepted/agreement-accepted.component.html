@@ -1,0 +1,14 @@
+<div class="AgreementAccepted">
+    <div class="text">
+      <label class="tittle">¡Felicitaciones!</label>
+      <span *ngIf="!withDiscount">Tu acuerdo de pago ha sido aprobado. Con Movistar es más fácil</span>
+      <span *ngIf="withDiscount">Descuento aceptado. Si deseas pagar tu factura con descuento, clic en el botón pagar</span>
+    </div>
+    <div class="img"></div>
+    <div class="buttons"> 
+      <button class="btn btn-success" (click)="redirectEpayco()">Pagar</button>
+      <button class="btn btn-light" (click)="redirect()">Volver a Movistar.co</button>
+    </div>
+  </div>
+  
+  

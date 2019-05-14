@@ -1,0 +1,42 @@
+<form [formGroup]="discountOptionsForm">
+    <div class="radiosContainer">
+      <label class="tittle">OPCIONES DE DESCUENTO</label>
+      <div class="basicInformation">
+        <span>Señor(a)</span>
+        <span class="previous" *ngIf="valueWithDiscount<this.auth.obj_Authentication.saldo">$ {{this.auth.obj_Authentication.saldo}}</span>
+        <span class="name">{{this.auth.obj_Authentication.nombre}}</span>
+        <span class="new">$ {{valueWithDiscount}}</span>
+      </div>
+      <div class="text">
+          <p>Por favor escoge el descuento que mas se ajuste a tus posibilidades.</p>
+        </div>
+      <div class="radios">
+        <div class="form-check" *ngFor="let option of discountOptions">
+          <input class="form-check-input" type="radio" formControlName="optionDiscount" id="optionDiscountRadios" [value]="option.DescuentoRelativo"
+          (change)="changeDiscount()" (click)="changeSelected(option.DiasPago)">
+          <label class="form-check-label" for="optionDiscountRadios">
+            {{option.DescuentoRelativo}}% de descuento si pagas en {{option.DiasPago}} días.
+          </label>
+        </div>
+      </div>
+      <div *ngIf="submitted && f.optionDiscount.errors" class="invalid-feedback">
+          <div *ngIf="f.optionDiscount.errors.required">Debe elegir una opcion de descuento</div>
+      </div>
+ 
+      <div class="buttons">
+        <button class="btn btn-success" (click)="open(content)">Aceptar</button>
+        <button class="btn btn-light" (click)="backToAgreement()">Regresar</button>
+        <!-- <button class="btn btn-success">Revisar</button> -->
+      </div>
+    </div>
+  </form>
+
+  <ng-template #content let-c="close" let-d="dismiss">
+      <app-confirm-dialog [description]="text_discount" 
+         [question]="'¿Aceptas el acuerdo?'"
+        (result)="action($event,contentError)"></app-confirm-dialog>
+  </ng-template>
+
+  <ng-template #contentError let-c="close" let-d="dismiss">
+    <app-error-agreement [description]="text_error"></app-error-agreement>
+  </ng-template>

@@ -1,0 +1,63 @@
+<form [formGroup]="identificationForm">
+  <div class="logo"></div>
+  <div class="radiosContainer">
+    <label class="tittle">AUTOGESTIÓN DE DEUDA</label>
+    <div class="btn-group btn-group-toggle operations" ngbRadioGroup name="radioBasic"
+      formControlName="operationSelectRadio">
+      <label ngbButtonLabel class="btn-success">
+        <input ngbButton type="radio" [value]="1"> Fija
+      </label>
+      <label ngbButtonLabel class="btn-success">
+        <input ngbButton type="radio" [value]="2"> Móvil
+      </label>
+    </div>
+    <div>
+      <div class="form-group">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">
+              <fa-icon [icon]="idIcon"></fa-icon>
+            </span>
+          </div>
+          <input type="text" formControlName="identificationNumber" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.identificationNumber.errors}"
+            placeholder="Ingresa tu cédula o Nit"  (keypress)="generalKeyPressEvent($event.key,20,f.identificationNumber,true)"/>
+          <div *ngIf="submitted && f.identificationNumber.errors" class="invalid-feedback">
+            <div *ngIf="f.identificationNumber.errors.required">El número de identificación es obligatorio</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">
+              <fa-icon [icon]="refIcon"></fa-icon>
+            </span>
+          </div>
+          <input type="text" formControlName="paymentReference" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.paymentReference.errors}"
+            placeholder="Ingresa la referencia de pago" (keypress)="generalKeyPressEvent($event.key,15,f.paymentReference,true)"/>
+          <div *ngIf="submitted && f.paymentReference.errors" class="invalid-feedback">
+            <div *ngIf="f.paymentReference.errors.required">La referencia de pago es obligatoria</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group" *ngIf="f.operationSelectRadio.value==2">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">
+              <fa-icon [icon]="phoneIcon"></fa-icon>
+            </span>
+          </div>
+          <input type="text" formControlName="cellPhoneNumber" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && !MobileNumberValidation}"
+            placeholder="Ingresa el número de tu linea móvil" (keypress)="generalKeyPressEvent($event.key,10,f.cellPhoneNumber,true)"/>
+          <div *ngIf="submitted && !MobileNumberValidation" class="invalid-feedback numLinea">
+            <div *ngIf="!MobileNumberValidation">El número de la linea es obligatorio</div>
+          </div>
+        </div>
+      </div>
+      <div class="buttons"><button class="btn btn-success" (click)="redirectCheckDebt()">Continuar</button></div>
+    </div>
+  </div>
+</form>

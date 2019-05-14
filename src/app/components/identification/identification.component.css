@@ -1,0 +1,82 @@
+.logo{
+    width: 150px;
+    height: 120px;
+    background: #444;
+    position: absolute;
+    left: 32%;
+    top: -60px;
+    background: transparent url('../../resources/img/identidad.png') no-repeat center/160px ;
+}
+
+form{
+    clear: both;
+    width: 480px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.form-group{
+    margin: 10px;
+}
+
+.validateLimit{
+    display: block;
+}
+.reduceFont{
+    font-size: 0.7em;
+}
+
+.Validation{
+    display: block;
+}
+
+.radiosContainer{
+    margin: 10px;
+    padding: 50px 20px 20px;
+    /* border: 2px inset #fff; */
+    border-radius: 5px;
+    background: rgba(255,255,255,0.7);
+}
+.radiosContainer .btn-group{
+    display: inline-block;
+    margin: 0 10px 10px;
+}
+
+
+.operations{
+    margin: 0 auto !important;
+    display: table !important;
+}
+
+.operations .btn-success {
+    background-color: #fff !important;
+    border-color: #ced4da !important;
+    color:#444 !important;
+}
+
+.operations .btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show>.btn-success.dropdown-toggle {
+    background-color: #5bc500 !important;
+    border-color: #5bc500 !important;
+    color:#fff !important;
+}
+
+.buttons{
+    margin: 10px;
+}
+.buttons .btn-success{
+    width: 100%;
+}
+
+fa-icon{
+    color:#00a9e0;
+}
+
+.input-group-text{
+    background-color: #fff;
+    /* border: 1px solid #00a9e0; */
+    border-right: 0px;
+}
+
+.invalid-feedback.numLinea{
+    display: block !important;
+}

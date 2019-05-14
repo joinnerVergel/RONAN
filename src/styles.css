@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    font-family: telefonicaLight !important;
+}
+
+.btn-success {
+    color: #fff !important;
+    background-color: #5bc500 !important;
+    border-color: #5bc500 !important;
+    border-radius: 2px !important;
+}
+
+label.tittle{
+    font-weight: bold;
+    color: #00a9e0;
+    text-align: center;
+    display: block;
+    font-family: telefonicaBold !important;
+    text-shadow: -1px 1px #fff;
+}
+
+.modal-content{
+    background-color:unset !important;
+}

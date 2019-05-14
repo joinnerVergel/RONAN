@@ -1,0 +1,45 @@
+.AgreementNotAccepted{
+    padding: 20px;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.7);
+    width: 500px;
+    margin: 0 auto;
+}
+
+.img{
+    background: url('../../resources/img/error-tv.svg') no-repeat center 0px/240px;
+    height: 150px;
+    margin: 20px;
+    position: relative;
+}
+.text{
+ color: #fff;
+ font-size: 20px;
+}
+.text span{
+    display: block;
+    text-align: center;
+    color: #777;
+}
+
+.btn-success{
+    display: table;
+    margin: 0 auto;
+    width: 80%;
+}
+
+label.tittle {
+    color: #ff406f;
+}    
+
+.buttons{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.buttons button{
+    margin: 20px 0 0;
+    width: 95%;
+    
+}
+

@@ -1,0 +1,16 @@
+<div class="AgreementNotAccepted">
+    <div class="text">
+        <label class="tittle">¡Lo sentimos!</label>
+        <span>Movistar te recuerda que el no pago de tus facturas acarrea costos de reconexión y reportes a centrales de riesgo. Si deseas aceptar el acuerdo de pago elegido anteriormente haz clic en “Aceptar Acuerdo”, o si deseas comunicarte con nuestro ChatBot haz clic en "ChatBot"</span>
+    </div>
+    <div class="img"></div>
+    <div class="buttons">
+        <div class="buttons"> <button class="btn btn-light" (click)="redirect()">ChatBot</button></div>
+         <button class="btn btn-success" (click)="setAgreement(contentError)">Aceptar acuerdo</button>
+    </div>
+  </div>
+  <ng-template #contentError let-c="close" let-d="dismiss">
+    <app-error-agreement [description]="text_error"></app-error-agreement>
+  </ng-template>
+  
+  

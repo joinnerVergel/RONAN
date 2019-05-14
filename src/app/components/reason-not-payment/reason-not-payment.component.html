@@ -1,0 +1,28 @@
+<div>
+  <form [formGroup]="notPaymentOptionsForm">
+    <div class="radiosContainer">
+      <label class="tittle">MOTIVO DE NO PAGO</label>
+      <div class="basicInformation">
+        <span>Señor(a)</span>
+        <span class="name">{{this.auth.obj_Authentication.nombre}}</span>
+      </div>
+      <div>Por favor indicanos el motivo de no pago de tu factura</div>
+      <div class="radios">
+        <div class="radios_">
+          <div class="form-check" *ngFor="let option of notPaymentOptions">
+            <input class="form-check-input" type="radio" formControlName="optionNotPayment" id="notPaymentRadios"
+              [value]="option.idMotivo">
+            <label class="form-check-label" for="notPaymentRadios">
+              {{option.Motivo}}
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="btn btn-success" (click)="redirectAgreement()">Continuar</button>
+        <button class="btn btn-light" (click)="backToIdentification()">Cancelar</button>
+      </div>
+    </div>
+  </form>
+</div>

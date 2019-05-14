@@ -1,0 +1,41 @@
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-md'>
+      <nav class="navbar px-5">
+        <div class='navbar-header'>
+          <div class="logo"></div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class='row rowContainer'>
+    <div class='body-content'>
+      
+      <!-- <app-clouds></app-clouds> -->
+      
+      <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link" [ngClass]="getIdentificationClass()" data-toggle="tab" routerLink="/RONAN/identification" role="tab" aria-selected="true" aria-disabled="true">1</a>
+            <span>Datos Principales</span>
+          </li>
+          <li class="nav-item" *ngIf="isAuthenticated()">
+            <a class="nav-link" [ngClass]="getCheckDebtClass()" data-toggle="tab" routerLink="/RONAN/checkDebt" role="tab" aria-selected="false" aria-disabled="true">2</a>
+            <span>Motivo de no pago</span>
+          </li>
+          <li class="nav-item" *ngIf="isAuthenticated()">
+              <a class="nav-link" [ngClass]="getAgreementClass()" data-toggle="tab" routerLink="/RONAN/agreement" role="tab" aria-selected="false" aria-disabled="true">3</a>
+              <span>Acuerdo de pago</span>
+          </li>
+          <li class="nav-item" *ngIf="isAuthenticated() && isDiscount()">
+              <a class="nav-link" [ngClass]="getDiscountClass()" data-toggle="tab" routerLink="/RONAN/discount" role="tab" aria-selected="false" aria-disabled="true">4</a>
+              <span>Descuento de pago</span>
+          </li>
+        </ul> -->
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active"  role="tabpanel">
+              <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

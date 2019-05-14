@@ -1,0 +1,93 @@
+.logo{
+    background: url('../../resources/img/Logo-movistar-desktop.svg');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    width: 170px;
+    height: 38px;
+    margin: 10px;
+    float: left;
+}
+.container-fluid{
+    padding: 0;
+}
+.body-content{
+    padding: 20px 40px 20px 0;
+    overflow: auto;
+    height: calc(95vh - 4rem);
+    /* background-color: #66cbec; */
+    background: linear-gradient(to bottom,rgba(13,157,174,1),rgba(13,157,174,0.2)) !important;
+    width: 100%;
+}
+.rowContainer{
+    overflow: auto;
+}
+
+.navbar-header{
+    width: 100%;
+}
+
+
+ul.nav-tabs{
+    margin: 0 auto;
+    border-bottom: 0px;
+    width: max-content;
+}
+
+.nav-item span{
+    position: absolute;
+    font-size: 0.7em;
+    width: max-content;
+    color: #fff;
+    text-align: center;
+    bottom: -20px;
+    left: -25px;
+}
+.nav-item a{
+    border-radius: 50% !important;
+    background: transparent !important;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    opacity: 0.8;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+a.nav-link.active{
+    opacity: 1;
+    background: #fff !important;
+    border:1px solid rgba(13,157,174,1);
+    color: rgba(13,157,174,1) !important;
+    box-shadow: 2px 1px #0098d2;
+}
+
+.nav-item{
+    position: relative;
+    margin: 0 50px;
+}
+.nav-item::before{
+    width: 100px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    right: -100px;
+    content: "";
+    top: 15px;
+}
+
+.nav-item:last-child::before{
+    display: none;
+}
+
+.tab-content{
+    margin-top:50px;
+}
+
+@media (max-width: 768px) {
+    .body-content{
+        padding: 20px 40px 20px 40px;
+    }
+
+}

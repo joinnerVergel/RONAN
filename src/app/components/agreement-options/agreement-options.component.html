@@ -1,0 +1,44 @@
+<form [formGroup]="agreementOptionsForm">
+  <div class="radiosContainer">
+    <label class="tittle">ACUERDO DE PAGO</label>
+    <div class="basicInformation">
+        <span>Señor(a)</span>
+        <span class="name">{{this.auth.obj_Authentication.nombre}}</span>
+    </div>
+    <div>Movistar te ofrece las siguiente opciones para hacer tu acuerdo de pago en tu servicio, por favor indícanos en
+      cuantos días podemos contar con el pago de tu servicio:
+    </div>
+    <div class="radios">
+      <div class="form-check" *ngFor="let option of options">
+        <input class="form-check-input" type="radio" formControlName="optionDay" id="optionDayRadios" [value]="option"
+        (change)="changeAgreement()">
+        <label class="form-check-label" for="optionDayRadios">
+          {{option}} día(s)
+        </label>
+      </div>
+      
+    </div>
+    <div class="text">
+      <p>Para confirmar tu acuerdo de pago presiona el boton Aceptar.</p>
+      <p *ngIf="with_Discount">
+        Si deseas conocer si puedes acceder a un descuento en el saldo de tu factura haz click 
+        <span class="btnRedirect" (click)="redirectToDiscount()">Aquí</span>.
+      </p>
+    </div>
+    <div class="buttons">
+      <button class="btn btn-success" (click)="open(content)">Aceptar</button>
+      <button class="btn btn-light" (click)="backToReason()">Regresar</button>
+    </div>
+  </div>
+</form>
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <app-confirm-dialog  [description]="text_agreement" 
+     [note]="'*Recuerda que puedes hacer el pago de tus servicios Movistar desde nuestras Apps: MiMovistar o MiMovistarLite, o directamente en nuestra página web movistar.co opción Pagos y Recargas.'"   [question]="'¿Aceptas el acuerdo?'"
+      (result)="action($event,contentError)"></app-confirm-dialog>
+</ng-template>
+
+<ng-template #contentError let-c="close" let-d="dismiss">
+  <app-error-agreement [description]="text_error"></app-error-agreement>
+</ng-template>
+
