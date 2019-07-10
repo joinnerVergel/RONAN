@@ -77,7 +77,7 @@ export class AgreementOptionsComponent implements OnInit {
     this.auth.dataAgreement.DiasSuspensionGestion = this.f.optionDay.value;
     this.auth.dataAgreement.Descuento = null;
     this.modalService.open(content);
-    console.log(this.auth.dataAgreement);
+    // console.log(this.auth.dataAgreement);
   }
 
   backToReason() {

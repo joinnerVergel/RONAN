@@ -52,7 +52,7 @@ export class DiscountComponent implements OnInit {
   }
 
   getValueWithDiscount(){
-    console.log(this.auth.obj_Authentication.saldo);
+    // console.log(this.auth.obj_Authentication.saldo);
     this.valueWithDiscount=this.auth.obj_Authentication.saldo -(+this.auth.obj_Authentication.saldo*this.f.optionDiscount.value/100);
   }
 
@@ -75,7 +75,7 @@ export class DiscountComponent implements OnInit {
       this.auth.dataAgreement.DiasSuspensionGestion=this.daysDiscountSelected;
       this.auth.dataAgreement.Descuento=this.f.optionDiscount.value;
       this.modalService.open(content);
-      console.log(this.auth.dataAgreement);
+      // console.log(this.auth.dataAgreement);
     }
   }
 

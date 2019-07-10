@@ -106,7 +106,7 @@ export class IdentificationComponent implements OnInit {
           .subscribe(
           respuesta => {
             if (respuesta["State"]) {
-              console.log("Token Invalidado")
+              // console.log("Token Invalidado")
             }else{
               console.log("Error", respuesta["Msg"]);
             }
